@@ -1,9 +1,9 @@
-colorBlocks.controller('GameController', function() {
+colorBlocks.controller('GameController',[ 'DataFactory', function(DataFactory) {
 
 console.log('game controller running');
 
 var self = this;
-self.colors = ['red', 'blue', 'magenta', 'green', 'pink'];
+self.colors = DataFactory.colors;
 
 // start game
 init();
@@ -29,4 +29,4 @@ self.handleInput = function(clickedColor) {
 function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
-});
+}]);
