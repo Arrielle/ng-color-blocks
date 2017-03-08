@@ -3,7 +3,7 @@ colorBlocks.controller('GameController',[ 'DataFactory', function(DataFactory) {
 console.log('game controller running');
 
 var self = this;
-self.colors = DataFactory.colors;
+self.colors = DataFactory.factoryColors;
 
 // start game
 init();

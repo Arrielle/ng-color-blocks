@@ -3,7 +3,6 @@ colorBlocks.factory('DataFactory', [function() {
   var colors = ['red', 'blue', 'magenta', 'green', 'pink'];
 
   return {
-    colors: colors
+    factoryColors: colors
   }
-
 }]);
