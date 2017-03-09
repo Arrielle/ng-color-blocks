@@ -13,25 +13,15 @@ self.score = self.players[self.players.length - 1].highscore;
 self.newPlayer = '';
 //sets a new highscore to false (to hide and unhide things in html)
 self.newHighScore = false;
+//current score always starts at 0
+self.currentScore = 0;
+//highScore is the self.score which is the most recent object in the array which should have the highest score
+self.highScore = self.score;
 
-
-self.newScore = function(){
-  console.log('button was clicked');
-  self.players.push({name: angular.copy(self.newPlayer), highscore: self.currentScore})
-  console.log('self.players', self.players);
-
-}
-
-// if (currentScore > highScore){
-//   self.newHighScore == true;
-// } else {
-//   self.newHighScore == false;
-// }
 
 // start game
 init();
-self.currentScore = 0;
-self.highScore = self.score;
+
 
 // resets game to the starting state
 function init() {
@@ -50,12 +40,20 @@ self.handleInput = function(clickedColor) {
     self.messageText = 'Oh no! You guessed wrong!';
     self.currentScore--;
   }
-
+//checks to see if the current score is higher than the highscore
   if (self.currentScore > self.highScore){
     self.newHighScore = true;
   } else {
     self.newHighScore = false;
   }
+}
+
+//pushes new high score to the leaderboards when Add to Leaderboards button has been clicked
+self.newScore = function(){
+  console.log('button was clicked');
+  self.players.push({name: angular.copy(self.newPlayer), highscore: self.currentScore})
+  console.log('self.players', self.players);
+  init();
 }
 
 //UTILITY FUNCTIONS
