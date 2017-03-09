@@ -7,7 +7,7 @@ self.colors = DataFactory.factoryColors;
 
 // start game
 init();
-self.highscore = 0;
+self.currentScore = 0;
 
 // resets game to the starting state
 function init() {
@@ -20,13 +20,13 @@ function init() {
 self.handleInput = function(clickedColor) {
   if(clickedColor === self.currentColor) {
     alert('You got it!\n\nNow try another!');
-    self.highscore++;
-    console.log(self.highscore);
+    self.currentScore++;
+    console.log(self.currentScore);
     init();
   } else {
     self.messageText = 'Oh no! You guessed wrong!';
-    self.highscore--;
-    console.log(self.highscore);
+    self.currentScore--;
+    console.log(self.currentScore);
   }
 }
 

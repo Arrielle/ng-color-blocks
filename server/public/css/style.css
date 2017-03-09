@@ -13,3 +13,21 @@ main {
     margin: 10px;
     cursor: pointer;
 }
+
+#scoreTable tr:first-child {
+  background-color: pink;
+  height: 40px;
+}
+
+#scoreTable td {
+  height: 40px;
+  padding: 40px;
+}
+
+#scoreDiv {
+  text-align: center;
+}
+
+#scoreDiv h1{
+  margin-bottom: 40px;
+}
