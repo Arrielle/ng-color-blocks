@@ -4,10 +4,10 @@
   <input ng-model="settings.newColor" placeholder="Enter a valid css color" type="text" name="newColor" value="">
   <button ng-click="settings.addColor()"type="button" name="button">Submit</button>
   <table>
-    <tr ng-repeat="colors in settings.colors">
-    <td><input value="{{colors}}"/></td>
+    <tr ng-repeat="colors in settings.colors" ng-model="settings.colors">
+    <td><input ng-model="colors.name" value="{{colors.name}}"/></td>
     </tr>
   </table>
   {{settings.colors}}
-  <!-- {{scopeColor}} -->
+  {{scopeColor}}
 </div>
