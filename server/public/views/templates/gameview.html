@@ -1,6 +1,9 @@
 <div class="row" id="gameview">
   <h1>{{game.colorPrompt}}</h1>
-  <h2 ng-model="game.highscore">Your Current Score: {{game.currentScore}}</h2>
+  <h2 ng-model="game.highScore">Game High Score: {{game.score}}</h2>
+  <h2 ng-model="game.currentScore">Your Current Score: {{game.currentScore}}</h2>
+  <input ng-model="game.newPlayer" ng-hide="!game.newHighScore" placeholder="username"/>
+  <button ng-click="game.newScore()" ng-hide="!game.newHighScore" type="button" name="button">Add To Leaderboards</button>
 
   <h3 ng-if="game.messageText != ''" class="alert alert-warning">{{game.messageText}}</h3>
 

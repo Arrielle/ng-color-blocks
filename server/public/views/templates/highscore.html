@@ -5,8 +5,9 @@
     <th>Name</th>
     <th>High Score </th>
   </tr>
-  <tr>
-    <td>Arrielle</td>
-    <td>2293920</td>
+  <tr ng-repeat="thing in score.playersObjectArray" ng-model="score.playersObjectArray">
+    <td>{{thing.name}}</td>
+    <td>{{thing.highscore}}</td>
+  </tr>
   </table>
 </div>
