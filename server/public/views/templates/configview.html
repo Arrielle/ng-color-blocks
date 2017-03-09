@@ -5,7 +5,9 @@
   <button ng-click="settings.addColor()"type="button" name="button">Submit</button>
   <table>
     <tr ng-repeat="colors in settings.colors">
-    <td>{{colors}}</td>
+    <td><input value="{{colors}}"/></td>
     </tr>
   </table>
+  {{settings.colors}}
+  <!-- {{scopeColor}} -->
 </div>
