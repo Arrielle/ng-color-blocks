@@ -47,7 +47,6 @@ self.handleInput = function(clickedColor) {
     self.newHighScore = false;
   }
 }
-
 //pushes new high score to the leaderboards when Add to Leaderboards button has been clicked
 self.newScore = function(){
   console.log('button was clicked');

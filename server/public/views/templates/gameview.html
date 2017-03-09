@@ -2,8 +2,11 @@
   <h1>{{game.colorPrompt}}</h1>
   <h2 ng-model="game.highScore">Game High Score: {{game.score}}</h2>
   <h2 ng-model="game.currentScore">Your Current Score: {{game.currentScore}}</h2>
-  <input ng-model="game.newPlayer" ng-hide="!game.newHighScore" placeholder="username"/>
-  <button ng-click="game.newScore()" ng-hide="!game.newHighScore" type="button" name="button">Add To Leaderboards</button>
+
+  <form ng-submit="game.newScore()" ng-hide="!game.newHighScore" action="#!highscore">
+    <input ng-model="game.newPlayer" placeholder="username"/>
+    <button type="submit" name="button">Add To Leaderboards</button>
+  </form>
 
   <h3 ng-if="game.messageText != ''" class="alert alert-warning">{{game.messageText}}</h3>
 
@@ -11,3 +14,7 @@
     <div class="color-button" ng-repeat="color in game.colors" ng-style="{background: color.name}" ng-click="game.handleInput(color)"></div>
   </div>
 </div>
+
+
+<!-- <input ng-model="game.newPlayer" ng-hide="!game.newHighScore" placeholder="username"/>
+<button ng-click="game.newScore()" ng-hide="!game.newHighScore" type="button" name="button">Add To Leaderboards</button> -->
