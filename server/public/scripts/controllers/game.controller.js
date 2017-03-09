@@ -12,7 +12,7 @@ init();
 function init() {
   self.messageText = "";
   self.currentColor = self.colors[randomNumber(0, self.colors.length - 1)];
-  self.colorPrompt = 'Can you find the ' + self.currentColor + ' block?'
+  self.colorPrompt = 'Can you find the ' + self.currentColor.name + ' block?'
 }
 
 // click handler for guessing colors
